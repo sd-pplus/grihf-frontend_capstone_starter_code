@@ -7,7 +7,8 @@
     height: 100vh;
     padding-top: 15rem;
     background-color: transparent;
-    z-index: -1;
+    position: relative;
+    z-index: 0; /* Keep hero below the fixed navbar */
 }
 .hero-section .flex-hero {
     flex-direction: column;
@@ -81,6 +82,13 @@ button {
     width: 100%;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+/* Do not let landing button rules break navbar buttons */
+nav button.btn1 {
+    width: auto;
+    margin-top: 0;
+    padding: 0.4rem 1.2rem;
 }
 
 
